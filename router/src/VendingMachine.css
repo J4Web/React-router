@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.vendingMachine{
+   /* background: #000; */
+   height: 100vh;
+   width: 100vw;
+    background: url('../public/Images/VendingMachine.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* @media (max-width: 600px){
+    .vendingMachine{
+    width: 100%;
+    height: 100%;
+    }
+    
+} */
