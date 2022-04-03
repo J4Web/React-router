@@ -11,7 +11,7 @@ function App() {
     <div className="App">
     {/* <Navbar/> */}
             <Routes>
-            <Route path="/food/:id" ><UseParams/></Route>
+            <Route path="/food/:id" element={ <UseParams/>} />
             </Routes>
     </div>
   );
