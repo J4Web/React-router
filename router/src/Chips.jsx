@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import ChipsImg from './Chips.png'
 class Chips extends Component {
     constructor(props) {
@@ -27,6 +28,7 @@ class Chips extends Component {
                 className="bag"
                 src={ChipsImg} alt="lays"/>
             })}
+            <Link to="/">GO BACK</Link>
 
             </div>
         );

@@ -1,0 +1,6 @@
+.navbar-container{
+    display: flex;
+    background: grey;
+    padding: 1em;
+    justify-content: space-around;
+}
