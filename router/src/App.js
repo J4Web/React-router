@@ -5,6 +5,7 @@ import { Routes, Route, Link,NavLink } from "react-router-dom";
 // import Soda from './Soda';
 // import Sardines from './Sardines';
 import UseParams from './UseParams';
+import FoodForm from './FoodForm';
 // import Navbar from './Navbar';
 
 function Home() {
@@ -27,7 +28,7 @@ function App() {
     <div className="App">
     {/* <Navbar/> */}
             <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/" element={<FoodForm/>} />
             <Route path="/food/:id" element={<UseParams/>} />
             <Route path="*" element={<Error/>}/>
             </Routes>
