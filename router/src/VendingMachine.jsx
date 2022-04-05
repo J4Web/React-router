@@ -8,7 +8,7 @@ class VendingMachine extends Component {
             <div className="vendingMachine">
             <Message>
                 <h1>Hello Welcome! to the VendingMachine we serve food here.</h1>
-                   <nav>
+            <nav>
             <NavLink to="/chips">Chips</NavLink>
             <NavLink to="/sardines">Sardines</NavLink>
             <NavLink to="/soda">Soda</NavLink>
