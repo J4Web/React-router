@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import FoodForm from './FoodForm';
-import { Routes, Route, useParams, Redirect, Navigate } from "react-router-dom";
+import React from 'react';
+import { useParams, Navigate, useNavigate } from "react-router-dom";
+
 
 function UseParams() {
     const {id} = useParams();
@@ -11,6 +11,7 @@ function UseParams() {
             (<div>
             <h1>You Searched for... {id}</h1>
             <img src={link} alt={id}/>
+            
 </div>)}
         </div>
     )
