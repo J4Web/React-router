@@ -8,6 +8,12 @@ class FoodForm extends Component {
             query:""
         }
         this.handleChange=this.handleChange.bind(this);
+        this.handleClick=this.handleClick.bind(this);
+    }
+    handleClick()
+    {
+      alert('Button clicked and seached', this.state.query);
+      this.props.router.navigate(`/food/${this.state.query}`)
     }
     handleChange(evt){
         this.setState({query:evt.target.value});
@@ -17,7 +23,7 @@ class FoodForm extends Component {
       <div><h1>Search Your food here...</h1>
       <input type="text" value={this.state.query} onChange={this.handleChange} />
       <NavLink to={`/food/${this.state.query}`}>Go!</NavLink>
-      <button>heree</button>
+      <button onClick={this.handleClick} >heree</button>
       </div>
     )
   }
