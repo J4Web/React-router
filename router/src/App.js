@@ -1,11 +1,13 @@
 import './App.css';
 import VendingMachine from './VendingMachine';
 import { Routes, Route, Link,NavLink } from "react-router-dom";
+import DogDetail from './DogDetails';
 // import Chips from './Chips';
 // import Soda from './Soda';
 // import Sardines from './Sardines';
 import UseParams from './UseParams';
 import FoodForm from './FoodForm';
+import withRouter from './WithRouter';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Navbar from './Navbar';
@@ -65,7 +67,7 @@ function Error() {
     </div>
   )
   }
-export default class App extends Component {
+ class App extends Component {
   static defaultProps = {
     dogs: [
     {
@@ -101,6 +103,11 @@ export default class App extends Component {
   ]
   }
   render() {
+    const getDog=(props) =>{ 
+      let {id}= this.props.router.params;
+      console.log(this.props.router.params)
+
+    }
     return (
           <div className="App">
     {/* <Navbar/> */}
@@ -108,9 +115,12 @@ export default class App extends Component {
             <Route path="/" element={<FoodForm/>} />
             <Route path="/dogs" element={<Dogs info={this.props.dogs}/>} />
             <Route path="/food/:id" element={<UseParams/>} />
+            <Route path="/dogs/:id" element={<DogDetail name={getDog()} />} />
             <Route path="*" element={<Error/>}/>
             </Routes>
     </div>
     )
   }
 }
+
+export default withRouter(App)
