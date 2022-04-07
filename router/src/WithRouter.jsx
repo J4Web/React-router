@@ -1,6 +1,6 @@
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
-function withRouter(FoodComp) {
+function withRouter(Dogs) {
   return function Component(props) {
     const location = useLocation();
     const navigate= useNavigate();
@@ -8,7 +8,7 @@ function withRouter(FoodComp) {
 
     const router = { location, navigate, params };
 
-    return <FoodComp {...props} router={router} />;
+    return <Dogs {...props} router={router} />;
   };
 }
 
