@@ -3,6 +3,10 @@ import './App.css'
 import WithRouter from './WithRouter';
 
 class Dogs extends Component {
+    handleClick(name) {
+        this.props.router.navigate(`/dogs/${name}`)
+
+    }
     render() {
         return (
             <div className="DogList">
@@ -15,7 +19,7 @@ class Dogs extends Component {
                 <h3>{info.name}</h3>
                 <img className="dog" src={info.src} alt={info.name}/>
                 <p>
-                <button className="btn-primary" onClick={this.handleClick}>Details</button>
+                <button className="btn btn-info" onClick={this.handleClick.bind(this,info.name)}>Details</button>
                 </p>
                 </div>
                 })}

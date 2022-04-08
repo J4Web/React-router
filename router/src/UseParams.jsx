@@ -3,6 +3,7 @@ import { useParams, Navigate, useNavigate } from "react-router-dom";
 
 
 function UseParams() {
+    console.log(useParams());
     const {id} = useParams();
     const link=`https://source.unsplash.com/1600x900/?${id}`;
     return (

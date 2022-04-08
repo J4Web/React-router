@@ -59,7 +59,6 @@ function Home() {
   )
 }
 
-
 function Error() {
   return (
     <div>
@@ -103,19 +102,16 @@ function Error() {
   ]
   }
   render() {
-    const getDog=(props) =>{ 
-      let {id}= this.props.router.params;
-      console.log(this.props.router.params)
 
-    }
     return (
           <div className="App">
     {/* <Navbar/> */}
+    {/* <h1>{}</h1> */}
             <Routes>
             <Route path="/" element={<FoodForm/>} />
-            <Route path="/dogs" element={<Dogs info={this.props.dogs}/>} />
+            <Route path="/dogs" element={<Dogs info={this.props.dogs}  />} />
             <Route path="/food/:id" element={<UseParams/>} />
-            <Route path="/dogs/:id" element={<DogDetail name={getDog()} />} />
+            <Route path="/dogs/:id" element={<DogDetail detail={this.props.dogs}/>} />
             <Route path="*" element={<Error/>}/>
             </Routes>
     </div>
@@ -123,4 +119,4 @@ function Error() {
   }
 }
 
-export default withRouter(App)
+export default App
