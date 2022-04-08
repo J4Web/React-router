@@ -4,7 +4,7 @@ import './DogsDetails.css';
 import Tubby from './imgs/tubby.jpg';
 import Whiskey from './imgs/whiskey.jpg';
 import Hazel from './imgs/hazel.jpg';
-import {NavLink} from 'react-router-dom';
+import {NavLink,Link} from './navreact-router-dom';
 class DogDetails extends Component {
 
     constructor(props) {
@@ -42,7 +42,7 @@ class DogDetails extends Component {
 
             </ul>
             <div className="card-body">
-            <NavLink className="btn btn-info" to='/dogs'>Go BACK</NavLink>
+            <Link className="btn btn-info" to='/dogs'>Go BACK</Link>
             </div>
             </div>
 
